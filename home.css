@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500&family=Roboto:wght@900&display=swap');/* font-family: 'Lato', sans-serif; */
+/* font-family: 'Roboto', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* navbar starts */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(6, 78, 161);
+    color: white;
+    padding: 5px 10px;
+    position: relative;
+}
+.logo_name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+.logo_name img {
+    height: 7vh;
+}
+.logo_name h5 a{
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px black;
+    color: white;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+/* burger */
+.bi-list {
+    justify-content: space-between;
+    position: absolute;
+    font-size: 2rem;
+    top: .75rem;
+    right: 1rem;
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+.nav-menu{
+    display: flex;
+}
+.nav-menu li {
+    list-style: none;
+    padding: 15px;
+
+}
+.nav-menu li:hover {
+    transform: scale(1.1);
+}
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: .5px;
+}
+@media (max-width:800px){
+    .nav {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 6px 0px 0px 0px;
+    }
+    .bi-list {
+        display: flex;
+    }
+    
+    .logo_name h5{
+        padding-left: 10px;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        
+    }
+    .nav-menu li {
+        text-align: center;
+        border-bottom: 2px solid rgb(6, 78, 161);;
+    }
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    .nav-menu li a {
+        letter-spacing: .8px;
+    }
+    .active {
+        display: flex;
+        background-color: rgb(8, 69, 138);
+    }
+}
+
+@media(max-width:400px){
+    .logo_name h5 a{
+        font-size: .9rem;
+}
+}
+/* navbar ends */
+
+
+
+
+
+
+/* slider starts */
+.imgslider {
+    position: relative;
+    width: 100%;
+    margin: 0px;
+    animation: slide 2s ease;
+}
+@keyframes slide {
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.slides {
+    display: none;
+}
+.slides img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrows {
+    top: 40%;
+    position: absolute;
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: rgb(209, 204, 198, 0.3);
+    box-shadow: 0px 0px 3px black;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+}
+.prev {
+    left: 2px;
+}
+.next {
+    right: 2px;
+}
+
+.slidetext {
+    color: rgb(1, 20, 37);
+    position: absolute;
+    top: 10px;
+    background-color: rgba(150, 150, 150, 0.3);
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 10px;
+    /* text-shadow: 1px 1px 3px whitesmoke; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+
+@media(max-width:300px){
+    .slidetext{
+        font-size: .8rem;
+    }
+}
+@media(min-width:600px) and (max-width:800px){
+    .slidetext{
+        font-size: 1.4rem;
+    }
+}
+@media(min-width:801px){
+    .slidetext{
+        font-size: 2rem;
+    }
+}
+@media(min-width:1200px){
+    .slidetext{
+        font-size: 3rem;
+    }
+}
+/* slider ends */
+
+
+
+
+
+
+/* contact starts */
+.contact-1 {
+    position: relative;
+    padding: 5vw 1vw; 
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+.contact-1 h2 {
+    font-size: 2rem;
+}
+.contact-1 p {
+    padding: 30px;
+    font-size: 1.2rem;
+}
+.contact-1 .c-btn {
+    padding: 10px;
+    background-color: #222;
+    border: none;
+}
+.contact-1 .c-btn:hover {
+    transform: scale(1.1);
+}
+.contact-1 .c-btn a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+@media(max-width:400px){
+    
+    .contact-1 h2 {
+        font-size: 1rem;
+    }
+    .contact-1 p {
+        padding: 15px;
+        font-size: .8rem;
+    }
+    .contact-1 .c-btn {
+        padding: 5px;
+    }
+    .contact-1 .c-btn a{
+        font-size: .8rem;
+    }
+}
+/* contact ends */
+
+
+
+
+
+/* services starts */
+.src-intro {
+    text-align: center;
+    padding: 25px 0px 15px 0px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    background-color: aliceblue;
+}
+
+.services {
+    background-color: aliceblue;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+.s-cards {
+    width: 150px;
+    height: 300px;
+    background-color: white;
+   cursor: pointer;
+    box-shadow: 1px 1px 5px black;
+}
+
+.s-cards .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30%; 
+}
+.s-cards h3 {
+    font-size: 1.2rem;
+    padding: 1vw;
+    text-align: center;
+    line-height: 1.5rem;
+}
+.s-cards p {
+    font-size: .7rem;
+    padding: 0vw 4px;
+    text-align: center;
+    /* text-justify: inter-character; */
+}
+@media(max-width:400px){
+    .services {
+        padding: 30px 10px;
+        gap: 30px;
+    }
+}
+/* services ends */
+
+
+
+
+/* fixed image start */
+.fixed-img {
+    position: relative;
+    background-image: url('images/catsitting.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+   
+}
+.fixed-img p {
+    text-align: center;
+    padding: 6px 60px;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    background-color: rgba(253, 253, 226, 0.479);
+}
+@media (min-width:600) {
+    .fixed-img p {
+    font-size: 1.5rem;
+    }
+}
+@media (min-width:1200) {
+    fixed-img p {
+        font-size: 2rem;
+        }
+}
+
+/* fixed image ends */
+
+
+
+
+
+
+/* google reviews starts */
+
+.ggle-intro {
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+.g-reviews {
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center; 
+}
+.g-reviews .rev{
+    width: 250px;
+    height: 300px;
+    box-shadow: 1px 1px 10px black;
+    padding: 20px;
+    background-color: aliceblue;
+}
+.g-reviews .rev:hover {
+    transform: scale(1.01);
+}
+.g-reviews .rev a {
+    text-decoration: none;
+    color: black;
+}
+.rev a h3 {
+    font-size: 1.2rem;
+}
+.rev a p {
+    font-size: .9rem;
+    padding: 10px 0px;
+}
+/* google reviews ends */
+
+
+
+
+
+/* google map starts */
+.map-lc {
+    display: flex;
+    justify-content: center;
+} 
+.map-lc .mp {
+    width: 50%;
+ }
+ @media(max-width:600px) {
+    .map-lc {
+        display: block;} 
+    .map-lc .mp {
+        width: 100%;
+     }
+ }
+
+.gmap iframe {
+    width: 100%;
+}
+.consult {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.consult h2 {
+    font-size: 1.5rem;
+}
+.consult .gbtn{
+    padding: 30px 5px;
+}
+.consult  .gbtn a {
+    padding: 15px 10px;
+    text-decoration: none;
+    color: white;
+    width: 150px;
+    background-color: #222;
+    font-size: 1rem;
+}
+.consult  .gbtn a:hover {
+    transform: scale(1.05);
+}
+/* google map ends */
+
+
+
+
+
+/* footer starts */
+.footer {
+    background-color: rgb(6, 78, 161);
+    color: rgb(192, 189, 189);
+    font-size: .9rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+}
+.fhead {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+}
+.fhead a {
+    text-decoration: none;
+    color: rgb(226, 222, 222);
+}
+.fhead > * {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+}
+.fhead > * h4, a {
+    color: rgb(243, 243, 243);
+    letter-spacing: .5px;
+
+}
+
+.pages{
+    align-items: left;
+}
+
+
+.footer .fbottom {
+    font-size: .8rem;
+    padding: 10px;
+    text-align: right;
+}
+/* footer ends */
